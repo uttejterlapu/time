@@ -2,7 +2,7 @@
 
 const t = document.querySelector("p");
 const da = document.querySelector("h1");
-
+const body = document.querySelector("body")
 function zero (secs){
     if (secs<10){
         return "0"+secs;
@@ -46,6 +46,11 @@ function updateSeconds() {
     let seconds = d.getSeconds();
     let min = d.getMinutes();
     let hrs = d.getHours();
+    const angle = (360 / 12) * min + (360 / 60) * (seconds / 60);
+    // const angle = (360 / 60) *seconds;
+    body.style.backgroundImage = `linear-gradient(${angle}deg,black, rgb(248, 248, 248)`;
+    body.style.transition = `1.9s ease-in`;
+
     t.innerHTML = zero(Math.floor(hrs/2)) +":"+ zero(min) + ":" + zero(seconds) + " "+ am(hrs);
     da.innerHTML = d.getFullYear() + "-"+month(d.getMonth())+"-"+ zero(d.getDate())+" "+ day(d.getDay());
 }
