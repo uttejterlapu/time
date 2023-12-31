@@ -46,7 +46,7 @@ function updateSeconds() {
     let seconds = d.getSeconds();
     let min = d.getMinutes();
     let hrs = d.getHours();
-    t.innerHTML = Math.floor(hrs/2) +":"+ zero(min) + ":" + zero(seconds) + " "+ am(hrs);
+    t.innerHTML = zero(Math.floor(hrs/2)) +":"+ zero(min) + ":" + zero(seconds) + " "+ am(hrs);
     da.innerHTML = d.getFullYear() + "-"+month(d.getMonth())+"-"+ zero(d.getDate())+" "+ day(d.getDay());
 }
 
