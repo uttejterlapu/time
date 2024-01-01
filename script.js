@@ -41,6 +41,15 @@ function day(d){
 function month(m){
     return zero(m+1)
 }
+
+function time(ti){
+    if (ti>12){
+        return Math.floor(ti/12)
+    }
+    else{
+        return ti
+    }
+}
 function updateSeconds() {
     const d = new Date();
     let seconds = d.getSeconds();
@@ -51,7 +60,7 @@ function updateSeconds() {
     body.style.backgroundImage = `linear-gradient(${angle}deg,black, rgb(248, 248, 248)`;
     body.style.transition = `1.9s ease-in`;
 
-    t.innerHTML = zero(hrs) +":"+ zero(min) + ":" + zero(seconds) + " "+ am(hrs);
+    t.innerHTML = time(hrs) +":"+ zero(min) + ":" + zero(seconds) + " "+ am(hrs);
     da.innerHTML = d.getFullYear() + "-"+month(d.getMonth())+"-"+ zero(d.getDate())+" "+ day(d.getDay());
 }
 
