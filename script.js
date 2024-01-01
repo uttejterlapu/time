@@ -51,7 +51,7 @@ function updateSeconds() {
     body.style.backgroundImage = `linear-gradient(${angle}deg,black, rgb(248, 248, 248)`;
     body.style.transition = `1.9s ease-in`;
 
-    t.innerHTML = zero(Math.floor(hrs/2)) +":"+ zero(min) + ":" + zero(seconds) + " "+ am(hrs);
+    t.innerHTML = zero(hrs) +":"+ zero(min) + ":" + zero(seconds) + " "+ am(hrs);
     da.innerHTML = d.getFullYear() + "-"+month(d.getMonth())+"-"+ zero(d.getDate())+" "+ day(d.getDay());
 }
 
