@@ -44,7 +44,7 @@ function month(m){
 
 function time(ti){
     if (ti>12){
-        return zero(Math.floor(ti/12))
+        return zero(ti-12)
     }
     else{
         return zero(ti)
