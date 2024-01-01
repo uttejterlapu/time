@@ -44,10 +44,10 @@ function month(m){
 
 function time(ti){
     if (ti>12){
-        return Math.floor(ti/12)
+        return zero(Math.floor(ti/12))
     }
     else{
-        return ti
+        return zero(ti)
     }
 }
 function updateSeconds() {
